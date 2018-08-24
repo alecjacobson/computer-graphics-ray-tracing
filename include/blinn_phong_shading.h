@@ -8,8 +8,18 @@
 #include <memory>
 
 
-// includes Shadows!
-
+// Given a ray and its hit in the scene, return the Blinn-Phong shading
+// contribution over all _visible_ light sources (e.g., take into account
+// shadows). 
+// 
+// Inputs:
+//   ray  incoming ray
+//   hit_id  index into objects of the object just hit by ray
+//   t  _parametric_ distance along ray to hit
+//   n  unit surface normal at hit
+//   objects  list of objects in the scene
+//   lights  list of lights in the scene
+// Returns shaded color collected by this ray as rgb 3-vector
 Eigen::Vector3d blinn_phong_shading(
   const Ray & ray,
   const int & hit_id, 

@@ -1,0 +1,17 @@
+{
+  "camera": {
+    "type": "perspective",
+    "focal_length": 3,
+    "eye": [0,0,5],
+    "up": [0,1,0],
+    "look": [0,0,-1],
+    "height": 1,
+    "width": 1.7777777778
+  },
+  "materials": [
+  ],
+  "lights":[
+  ],
+  "objects": [
+  ]
+}

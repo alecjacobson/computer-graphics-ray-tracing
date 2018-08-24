@@ -16,6 +16,7 @@ struct Light;
 // Output:
 //   camera  camera looking at the scene
 //   objects  list of shared pointers to objects
+//   lights  list of shared pointers to lights
 inline bool read_json(
   const std::string & filename, 
   Camera & camera,

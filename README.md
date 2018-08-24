@@ -23,7 +23,32 @@ shadows, reflections, etc.).
 
 ![Running `./raytracing` should produce this image.](images/sphere-and-plane.png)
 
-## Dynamic Range & Burning
+## Floating point numbers
+
+For this assignment we will use the `Eigen::Vector3d` to represent points and
+vectors, but _also_ RGB colors. For all computation (before finally writing the
+.ppm file) we will use double precision floating point numbers and `0` will
+represent no light and `1` will represent the brightest color we can display.
+
+[Floating point
+numbers](https://en.wikipedia.org/wiki/Floating-point_arithmetic) $≠$ [real
+numbers](https://en.wikipedia.org/wiki/Real_number), they don't even cover all
+of the [rational numbers](https://en.wikipedia.org/wiki/Rational_number). This
+creates a number of challenges in numerical method and rendering is not immune
+to them. We see this in the need for a [fudge
+factor](https://en.wikipedia.org/wiki/Fudge_factor) to discard ray-intersections
+when computing shadows or reflections that are too close to the originating
+surface (i.e., false intersections due to numerical error).
+
+> **Question:** If we build a ray and a plane with floating point coefficients,
+> will the intersection point have floating point coefficients? What if we
+> consider rational coefficients? What if we consider a sphere instead of a
+> plane?
+>
+> **Hint:** Can we _exactly_ represent $1/3$ as a `double`? Can we represent
+> $\sqrt{2}$ as a rational?
+
+### Dynamic Range & Burning
 
 Light obeys the [superposition
 principle](https://en.wikipedia.org/wiki/Superposition_principle). Simply put,
@@ -55,6 +80,7 @@ regions where the collected light has been clamped to \[1,1,1\]
 >
 > **Side note:** This doesn't stop crafty visual effects artists from using
 > "negative lights" to manipulate scenes for aesthetic purposes.
+
 
 ## Whitelist
 
