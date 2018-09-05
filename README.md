@@ -7,7 +7,7 @@
 
 ## Background
 
-### Read Sections 4.5-4.9 of _Fundamentals of Comptuer Graphics (4th Edition)_.
+### Read Sections 4.5-4.9 of _Fundamentals of Computer Graphics (4th Edition)_.
 
 Many of the classes and functions of this assignment are borrowed or adapted
 from the previous [ray casting assignment](https://github.com/alecjacobson/computer-graphics-ray-casting).
