@@ -107,7 +107,7 @@ Eigen also has a built in way to normalize a vector (divide a vector by its
 length): `a.normalized()`.
 
 C++ standard library includes a value for $∞$ via `#include <limits>`. For
-example, for `double` floating point, use `std::numeric_limits<infinity>`.
+example, for `double` floating point, use `std::numeric_limits<double>::infinity()`.
 
 ## Tasks
 
