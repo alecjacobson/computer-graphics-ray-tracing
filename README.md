@@ -1,8 +1,8 @@
 # Computer Graphics – Ray Tracing
 
-> **To get started:** Fork this repository then issue
+> **To get started:** Clone this repository using
 > 
->     git clone --recursive http://github.com/[username]/computer-graphics-ray-tracing.git
+>     git clone --recursive http://github.com/alecjacobson/computer-graphics-ray-tracing.git
 >
 
 ## Background
