@@ -114,8 +114,7 @@ example, for `double` floating point, use `std::numeric_limits<double>::infinity
 ### `src/Plane.cpp`,<br> `src/Sphere.cpp`,<br> `src/Triangle.cpp`,<br> `src/TriangleSoup.cpp`,<br> `src/first_hit.cpp`,<br> `src/viewing_ray.cpp`,<br> `src/write_ppm.cpp`
 
 See the previous [ray casting
-assignment](https://github.com/alecjacobson/computer-graphics-ray-casting) or
-email jacobson@cs.toronto.edu.
+assignment](https://github.com/alecjacobson/computer-graphics-ray-casting).
 
 ### `PointLight::direction` in `src/PointLight.cpp`
 
@@ -163,3 +162,26 @@ parameters.
 
 The [.json format](https://en.wikipedia.org/wiki/JSON) is rather
 straightforward. But you may find this [validator](https://jsonlint.com) useful.
+
+> ### HW2 Solution
+> If you don't trust your solutiosn to the files from HW2:
+
+>     src/Plane.cpp
+>     src/Sphere.cpp
+>     src/Triangle.cpp
+>     src/TriangleSoup.cpp
+>     src/first_hit.cpp
+>     src/viewing_ray.cpp
+>     src/write_ppm.cpp
+>
+> You can use precompiled binaries (provided for mac and linux for now) using a
+> the cmake command:
+>
+>     mkdir build
+>     cd build
+>     cmake -DCMAKE_BUILD_TYPE=Debug -DHW2LIB_DIR=../lib/debug/linux/ ..
+>     make
+>
+> This will use the library at `../lib/debug/linux/libhw2.a` instead of
+> compiling the above files in `src/`.
+>
