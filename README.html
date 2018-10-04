@@ -51,6 +51,7 @@ MathJax.Hub.Config({ TeX: { equationNumbers: {autoNumber: "all"} } });
 <span class="math">\(\newcommand{\r}{\vec{r}}\)</span>
 <span class="math">\(\newcommand{\transpose}{{\mathsf T}}\)</span>
 <span class="math">\(\newcommand{\tr}[1]{\mathop{\text{tr}}{\left(#1\right)}}\)</span>
+<span class="math">\(\newcommand{\s}{\vec{s}}\)</span>
 <span class="math">\(\newcommand{\t}{\vec{t}}\)</span>
 <span class="math">\(\newcommand{\u}{\vec{u}}\)</span>
 <span class="math">\(\newcommand{\vec}[1]{\mathbf{#1}}\)</span>
@@ -276,6 +277,20 @@ make
 
 <p>This will use the library at <code>../lib/debug/linux/libhw2.a</code> instead of
 compiling the above files in <code>src/</code>.</p>
+</blockquote>
+
+<hr />
+
+<blockquote>
+<p><strong>Pro Tip:</strong> After you&#8217;re confident that your program is working <em>correctly</em>,
+you can dramatic improve the performance simply by enabling <a href="https://en.wikipedia.org/wiki/Optimizing_compiler">compiler
+optimization</a>: </p>
+
+<pre><code>mkdir build-release
+cd build-release
+cmake ../ -DCMAKE_BUILD_TYPE=Release
+make
+</code></pre>
 </blockquote>
 
 </body>

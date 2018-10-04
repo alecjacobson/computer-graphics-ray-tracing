@@ -185,3 +185,16 @@ straightforward. But you may find this [validator](https://jsonlint.com) useful.
 > This will use the library at `../lib/debug/linux/libhw2.a` instead of
 > compiling the above files in `src/`.
 >
+
+------------------------------------------------------------------------
+
+> **Pro Tip:** After you're confident that your program is working _correctly_,
+> you can dramatic improve the performance simply by enabling [compiler
+> optimization](https://en.wikipedia.org/wiki/Optimizing_compiler): 
+>
+> ```
+> mkdir build-release
+> cd build-release
+> cmake ../ -DCMAKE_BUILD_TYPE=Release
+> make
+> ```
