@@ -2,7 +2,7 @@
 
 > **To get started:** Clone this repository using
 > 
->     git clone --recursive http://github.com/alecjacobson/computer-graphics-ray-tracing.git
+>     git clone http://github.com/alecjacobson/computer-graphics-ray-tracing.git
 >
 
 ## Background
@@ -69,7 +69,7 @@ shading](https://en.wikipedia.org/wiki/Blinn–Phong_shading_model) does not
 correctly [conserve energy](https://en.wikipedia.org/wiki/Energy_conservation)
 as happens with light in the physical world.
 
-![Running `./raytracing ../shared/data/bunny.json` should produce this image.
+![Running `./raytracing ../data/bunny.json` should produce this image.
 Notice the ["burned out"](https://en.wikipedia.org/wiki/Burned_(image)) white
 regions where the collected light has been clamped to \[1,1,1\]
 (white).](images/bunny.png)
@@ -149,7 +149,7 @@ mirror reflections.](images/sphere-and-plane.gif)
 Given an "incoming" vector and a normal vector, compute the mirror reflected
 "outgoing" vector.
 
-![`./raytracing ../shared/data/sphere-packing.json` should produce this
+![`./raytracing ../data/sphere-packing.json` should produce this
 image of highly reflective, metallic looking
 surfaces.](images/sphere-packing.png)
 

@@ -10,7 +10,7 @@
 
 // Given a ray and its hit in the scene, return the Blinn-Phong shading
 // contribution over all _visible_ light sources (e.g., take into account
-// shadows). 
+// shadows). Use a hard-coded value of ia=0.1 for ambient light.
 // 
 // Inputs:
 //   ray  incoming ray
