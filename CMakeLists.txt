@@ -1,12 +1,9 @@
 cmake_minimum_required(VERSION 2.6)
 project(raytracing)
+set(ROOT "${CMAKE_CURRENT_LIST_DIR}")
 
 # Prepare the build environment
-set(SHARED_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/shared/")
-include_directories(${LIBIGL_INCLUDE_DIRS})
-add_definitions(${LIBIGL_DEFINITIONS})
 option(USE_SOLUTION "Use solution"  OFF)
-option(BUILD_TEST "Build test"  OFF)
 # Add your project files
 include_directories("include/")
 if(USE_SOLUTION)
@@ -24,12 +21,7 @@ set(HW2FILES
   "${CMAKE_CURRENT_SOURCE_DIR}/${SRC_DIR}/viewing_ray.cpp"
   "${CMAKE_CURRENT_SOURCE_DIR}/${SRC_DIR}/write_ppm.cpp")
 list(REMOVE_ITEM SRCFILES ${HW2FILES})
-
-if(BUILD_TEST)
-  list(APPEND SRCFILES test/main.cpp)
-else()
-  list(APPEND SRCFILES main.cpp)
-endif()
+list(APPEND SRCFILES main.cpp)
 # create executable
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
@@ -47,12 +39,11 @@ if(HW2LIB_DIR)
 endif()
 
 add_executable(${PROJECT_NAME} ${SRCFILES} ${LIBIGL_EXTRA_SOURCES})
-target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${SHARED_ROOT}/eigen ${SHARED_ROOT}/json)
-target_link_libraries(${PROJECT_NAME} ${LIBIGL_LIBRARIES} ${LIBIGL_EXTRA_LIBRARIES})
+target_include_directories(${PROJECT_NAME} SYSTEM PUBLIC ${ROOT}/eigen/ ${ROOT}/json)
 
 if(HW2LIB_DIR)
 else()
   add_library(hw2 ${HW2FILES})
-  target_include_directories(hw2 SYSTEM PUBLIC ${SHARED_ROOT}/eigen ${SHARED_ROOT}/json)
+  target_include_directories(hw2 SYSTEM PUBLIC ${ROOT}/eigen ${ROOT}/json)
 endif()
 target_link_libraries(${PROJECT_NAME} hw2)
