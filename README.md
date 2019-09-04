@@ -165,7 +165,7 @@ The [.json format](https://en.wikipedia.org/wiki/JSON) is rather
 straightforward. But you may find this [validator](https://jsonlint.com) useful.
 
 > ### HW2 Solution
-> If you don't trust your solutiosn to the files from HW2:
+> If you don't trust your solutions to the files from HW2:
 
 >     src/Plane.cpp
 >     src/Sphere.cpp
