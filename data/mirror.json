@@ -1,0 +1,116 @@
+{
+  "camera": {
+    "type": "perspective",
+    "focal_length": 1.1,
+    "eye": [1,0,2],
+    "up": [0,1,0],
+    "look": [-0.92388,0,-0.38268],
+    "height": 1,
+    "width": 1.7777777778
+  },
+
+  "lights":[
+    {
+      "type": "point",
+      "color": [0.3,0.4,0.3],
+      "position": [ 0,0.5,1.5]
+    },
+    {
+      "type": "point",
+      "color": [0.35,0.3,0.35],
+      "position": [  0,0.5,-0.5]
+    }
+  ],
+
+  "materials": [
+    {
+      "name": "matte gray",
+      "ka": [0.90, 0.90, 0.90],
+      "kd": [0.95, 0.95, 0.95],
+      "ks": [0.3,0.3,0.3],
+      "km": [0.05,0.05,0.05],
+      "phong_exponent": 200
+    },
+    {
+      "name": "black paint",
+      "ka": [0.1,0.1,0.1],
+      "kd": [0.1,0.1,0.1],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.0,0.0,0.0],
+      "phong_exponent": 200
+    },
+    {
+      "name": "brown plastic",
+      "ka": [0.596078,0.305882,0.639216],
+      "kd": [0.3,0.25,0.2],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.0,0.0,0.0],
+      "phong_exponent": 200
+    },
+    {
+      "name": "gray mirror",
+      "ka": [0.1,0.1,0.1],
+      "kd": [0.1,0.1,0.1],
+      "ks": [0.1,0.1,0.1],
+      "km": [0.999,0.999,0.999],
+      "phong_exponent": 1000
+    },
+    {
+      "name": "yellow bone",
+      "ka": [0.95, 0.95, 0.9],
+      "kd": [0.95, 0.95, 0.9],
+      "ks": [0.8,0.8,0.8],
+      "km": [0.00,0.00,0.00],
+      "phong_exponent": 200
+    }
+  ],
+
+  "objects": [
+    {
+      "type": "plane",
+      "material": "black paint",
+      "point": [-1,0,0],
+      "normal": [1,0,0]
+    },
+    {
+      "type": "plane",
+      "material": "black paint",
+      "point": [0,0,-1],
+      "normal": [0,0,1]
+    },
+    {
+      "type": "plane",
+      "material": "black paint",
+      "point": [0,1,0],
+      "normal": [0,-1,0]
+    },
+    {
+      "type": "plane",
+      "material": "black paint",
+      "point": [1,0,0],
+      "normal": [-1,0,0]
+    },
+    {
+      "material": "black paint",
+      "type": "plane",
+      "point": [0,-1,0],
+      "normal": [0,1,0]
+    },
+    {
+      "material": "brown plastic",
+      "type": "soup",
+      "stl": "frame.stl"
+    },
+    {
+      "material": "gray mirror",
+      "type": "soup",
+      "stl": "mirror.stl"
+    },
+    {
+      "material": "yellow bone",
+      "type": "soup",
+      "stl": "skull.stl"
+    }
+  ]
+}
+
