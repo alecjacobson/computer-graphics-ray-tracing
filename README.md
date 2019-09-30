@@ -175,7 +175,7 @@ straightforward. But you may find this [validator](https://jsonlint.com) useful.
 >     src/viewing_ray.cpp
 >     src/write_ppm.cpp
 >
-> You can use precompiled binaries (provided for mac and linux for now) using a
+> You can use precompiled binaries (provided for linux, mac, and windows) using a
 > the cmake command:
 >
 >     mkdir build
