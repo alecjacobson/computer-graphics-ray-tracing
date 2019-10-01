@@ -22,7 +22,7 @@ structure of the program is core to many methods for rendering with [global
 illumination](https://en.wikipedia.org/wiki/Global_illumination) effects (e.g.,
 shadows, reflections, etc.).
 
-![Running `./raytracing` should produce this image.](images/sphere-and-plane.png)
+![Running `./raytracing ../data/sphere-and-plane.json` should produce this image.](images/sphere-and-plane.png)
 
 ## Floating point numbers
 
