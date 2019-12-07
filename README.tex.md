@@ -32,7 +32,7 @@ vectors, but _also_ RGB colors. For all computation (before finally writing the
 represent no light and `1` will represent the brightest color we can display.
 
 [Floating point
-numbers](https://en.wikipedia.org/wiki/Floating-point_arithmetic) $≠$ [real
+numbers](https://en.wikipedia.org/wiki/Floating-point_arithmetic) $\ne $ [real
 numbers](https://en.wikipedia.org/wiki/Real_number), they don't even cover all
 of the [rational numbers](https://en.wikipedia.org/wiki/Rational_number). This
 creates a number of challenges in numerical method and rendering is not immune
@@ -107,7 +107,7 @@ The `.matrix()` converts the "array" view of the vector back to a "matrix"
 Eigen also has a built in way to normalize a vector (divide a vector by its
 length): `a.normalized()`.
 
-C++ standard library includes a value for $∞$ via `#include <limits>`. For
+C++ standard library includes a value for $\infty $ via `#include <limits>`. For
 example, for `double` floating point, use `std::numeric_limits<double>::infinity()`.
 
 ## Tasks
